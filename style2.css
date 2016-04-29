@@ -1,0 +1,84 @@
+/*
+ * Modernizr adds either a .feature or .no-feature class to
+ * the html element so you can target styles for when a feature
+ * is supported or use the no-* class name when it's not.
+ */
+
+/* 
+ * All flexbox supporting browsers will have these styles
+ */
+.flexbox ul {
+  display: flex;
+}
+
+/*
+ * Early firefox didn't support flexbox wrap.
+ * Modernizr has a separate feature test for 
+ * that.
+ */
+.flexwrap ul {
+  flex-wrap: wrap;
+}
+.flexbox li {
+  flex-basis: 150px;
+}
+
+/*
+ * Applied for older browsers
+ */
+.no-flexbox li {
+  float: left;
+  margin: 0 20px;
+}
+
+.no-flexbox .flex {
+  color: red;
+}
+.no-flexbox .flex:after {
+  /* '/2718' is the unicode for the cross symbol */
+  content: '/2718';
+}
+.no-peerconnection .webrtc {
+  color: red;
+}
+.no-peerconnection .webrtc:after {
+  content: '\2718';
+}
+.no-webp .webp {
+  color: red;
+}
+.no-webp .webp:after {
+  content: '\2718';
+}
+.no-serviceworker .serviceworkers {
+  color: red;
+}
+.no-serviceworker .serviceworkers:after {
+  content: '\2718';
+}
+
+
+
+
+/* Default styles */
+body {
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  color: green;
+  margin: 5px auto;
+  border: 1px solid;
+  padding: 5px;
+  box-sizing: border-box;
+  position: relative;
+}
+li:after {
+  /* '/2713' is the unicode for the tick symbol */
+  content: '\2713';
+  position: absolute;
+  right: 5px;
+}
